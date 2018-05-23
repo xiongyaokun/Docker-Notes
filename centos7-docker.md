@@ -41,4 +41,35 @@ $ newgrp - docker
 
 或者重新启动系统也可以。
 
+## [阿里云镜像库](https://dev.aliyun.com/search.html)
+
+### [我的阿里镜像加速地址](https://g1m61wkr.mirror.aliyuncs.com)
+
+<pre>
+https://g1m61wkr.mirror.aliyuncs.com
+</pre>
+
+### 使用方法
+
+<pre>
+$ sudo vim /etc/docker/daemon.json
+</pre>
+
+添加如下代码：
+
+<pre>
+{
+ "registry-mirrors": ["https://g1m61wkr.mirror.aliyumcs.com"]
+}
+</pre>
+
+保存退出vim
+
+然后:
+
+<pre>
+$ sudo systemctl daemon-reload
+$ sudo systemctl restart docker
+</pre>
+
 
