@@ -31,7 +31,7 @@ srw-rw----  1 root   root      0 23. Mai 10:24 docker.sock
 ### 解决方法如下：
 
 <pre>
-$ sudo group add docker 添加一个docker group
+$ sudo groupadd docker 添加一个docker group
 $ sudo gpasswd -a ${USER} docker
 $ sudo service docker restart
 $ newgrp - docker
